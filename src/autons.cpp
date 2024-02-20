@@ -1,6 +1,6 @@
 #include "main.h"
-#include "robot-config.h"
 #include "functions.h"
+#include "robot-config.h"
 /////
 // For instalattion, upgrading, documentations and tutorials, check out website!
 // https://ez-robotics.github.io/EZ-Template/
@@ -175,22 +175,24 @@ void fifteensec_red()
 
 void fifteensec_blue1()
 {
+// releases the wings and intake so that we can get it out the barrier
   IntakeIn();
   WingsOut();
+// moves right in front of the triball
   chassis.set_drive_pid(65, 100, false);
   chassis.wait_drive();
-
+// gets it out of the barrier
   chassis.set_turn_pid(45, 100);
   chassis.wait_drive();
 
   IntakeOut();
-
+// jams it into the goal
   chassis.set_drive_pid(45, 100, false);
   chassis.wait_drive();
 
   chassis.set_drive_pid(-40, 100, false);
   chassis.wait_drive();
-
+// uses the wings to plow the rest of the triball into the goal.
   WingsIn();
 
   chassis.set_turn_pid(225, 100);
@@ -200,49 +202,51 @@ void fifteensec_blue1()
 
   chassis.set_drive_pid(-45, 100, false);
   chassis.wait_drive();
-  
+
   chassis.set_drive_pid(45, 100, false);
   chassis.wait_drive();
 
   chassis.set_drive_pid(-50, 100, false);
   chassis.wait_drive();
-  
+
   chassis.set_drive_pid(50, 100, false);
   chassis.wait_drive();
-
+  // then turns parallel to the matchload bar
   WingsIn();
 
   chassis.set_turn_pid(0, 100);
   chassis.wait_drive();
-
+// drives to the end
   chassis.set_drive_pid(-45, 100);
   chassis.wait_drive();
-
+// faces the barrier
   chassis.set_turn_pid(-45, 100);
   chassis.wait_drive();
-
+// touches the barrier
   chassis.set_drive_pid(-80.5, 50, false);
   chassis.wait_drive();
 }
 
 void fifteensec_red1()
 {
+  // releases the wings and intake so that we can get it out the barrier
   IntakeIn();
   WingsOut();
+  // moves right in front of the triball
   chassis.set_drive_pid(65, 100, false);
   chassis.wait_drive();
-
+// gets it out of the barrier
   chassis.set_turn_pid(-45, 100);
   chassis.wait_drive();
 
   IntakeOut();
-
+// jams it into the goal
   chassis.set_drive_pid(45, 100, false);
   chassis.wait_drive();
 
   chassis.set_drive_pid(-40, 100, false);
   chassis.wait_drive();
-
+// uses the wings to plow the rest of the triball into the goal.
   WingsIn();
 
   chassis.set_turn_pid(-225, 100);
@@ -261,18 +265,21 @@ void fifteensec_red1()
   
   chassis.set_drive_pid(50, 100, false);
   chassis.wait_drive();
-
+  // then turns parallel to the matchload bar
 
   WingsIn();
 
   chassis.set_turn_pid(0, 100);
   chassis.wait_drive();
+// drives to the end
 
   chassis.set_drive_pid(-45, 100);
   chassis.wait_drive();
+// faces the barrier
 
   chassis.set_turn_pid(45, 100);
   chassis.wait_drive();
+// touches the barrier
 
   chassis.set_drive_pid(-80.5, 50, false);
   chassis.wait_drive();
