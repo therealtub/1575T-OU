@@ -81,7 +81,6 @@ void initialize() {
     Auton("AWP\n\n15 sec ummatched.", fifteensec_red),
     Auton("AWP\n\n15 sec matched REGULAR.", fifteensec_blue1),
     Auton("AWP\n\n15 sec ummatched REGULAR.", fifteensec_red1),
-    // Auton("efikhjsefujsed\n\ndescription", ranpo_skills),
   });
 
   // Initialize chassis and auton selector
