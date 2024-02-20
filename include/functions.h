@@ -1,3 +1,5 @@
+#pragma once
+
 void IntakeOut();
 void IntakeIn();
 
