@@ -1,39 +1,55 @@
-# EZ-Template-Example
-### This is the example project for the EZ-Template library.  
+1575T Vex Robot Program Repository
+Welcome to the 1575T Vex Robot Program repository! This repository contains all the code necessary to control our Vex robot for competitions and practice sessions. Below, you'll find instructions on how to use and contribute to this repository.
 
-EZ-Template is a simple plug-and-play PROS template that handles drive base functions for VEX robots.  
+Getting Started
+To get started with using the robot program, follow these steps:
 
-[EZ-Template Version](https://github.com/EZ-Robotics/EZ-Template): 2.1.0   
+Clone the Repository: Clone this repository to your local machine using Git.
 
-[Autonomous routines that used EZ-Template](https://photos.app.goo.gl/yRwuvmq7hDoM4f6EA)
+bash
+Copy code
+git clone https://github.com/1575T/vex-robot-program.git
+Install Required Software: Make sure you have the necessary software installed to compile and deploy the robot program. This typically includes:
 
-## Download and Installation  
-1) Download the latest example project [here](https://github.com/EZ-Robotics/EZ-Template-Example/releases/latest).  Extract the zip, and open it in PROS.   
-2) In `src/main.cpp`, configure drive and IMU ports to what they are on your robot.  Be sure to read the comments!    
-3) Configure your wheel size and cartrige.  Remember that 4" omni wheels are actually 4.125!    
-4) In `src/main.cpp`, at the bottom in `void opcontrol()`, decide how you'd like to control your robot!  Any flavor of arcade or tank!    
-5) Turn the robot on and use it in driver control.  Make sure the ports are correct and reversed correctly!    
-6) To test the test autonomous modes, plug into a competition switch and select the autonomous mode on the brain screen by pressing the left and right buttons!  The current page will be the autonomous that runs.  For making new autonomous routines, check `src/autons.cpp` for examples on how to use the drive functions.  
+VexCode IDE
+Robot Mesh Studio
+PROS Editor
+Open the Project: Open the project folder in your preferred IDE/editor.
 
-## Upgrading  
-*Note: this only works for 2.0.0 and beyond.  You cannot upgrade from 1.X.X to 2.X.X.*  
-1) Download the most recent EZ-Template [here](https://github.com/EZ-Robotics/EZ-Template/releases/latest).  
-2) In your terminal, `cd` into the directory you downloaded the file.    
-3) Run this command from terminal `prosv5 c fetch EZ-Template@2.1.0.zip`.  
-4) `cd` into your pros project directory in your terminal.  
-5) Apply the library to the project `prosv5 c apply EZ-Template`.  
-6) Put `#include "EZ-Template/api.hpp"` in your `include/main.h`.  
+Compile and Deploy: Compile the code and deploy it to your Vex robot. Ensure your robot is connected properly to your computer.
 
-## Tutorials
-[Check out our tutorials here!](https://ez-robotics.github.io/EZ-Template/tutorials)
+Test the Robot: Once the code is deployed, test the robot to ensure it behaves as expected. Make any necessary adjustments and repeat the process until you're satisfied with the performance.
 
-## Docs
-[Read the docs here!](https://ez-robotics.github.io/EZ-Template/docs)
+Contributing
+We welcome contributions from team members to improve and optimize our robot program. If you'd like to contribute, follow these steps:
 
-## Additing Autonomous Routines
-[Check out the tutorial on adding new autonomous routines here!](https://ez-robotics.github.io/EZ-Template/docs/Tutorials/autons.html)
+Fork the Repository: Click on the "Fork" button at the top-right corner of this repository to create your own copy.
 
+Clone Your Fork: Clone your forked repository to your local machine.
 
-## License
-This project is licensed under the Mozilla Public License, version 2.0 - see the [LICENSE](LICENSE)
-file for the full license.
+bash
+Copy code
+git clone https://github.com/your-username/vex-robot-program.git
+Create a Branch: Create a new branch to work on your changes.
+
+bash
+Copy code
+git checkout -b feature/new-feature
+Make Changes: Make your desired changes to the codebase.
+
+Commit Changes: Commit your changes with an appropriate commit message.
+
+bash
+Copy code
+git commit -am "Add new feature"
+Push Changes: Push your changes to your forked repository.
+
+bash
+Copy code
+git push origin feature/new-feature
+Create a Pull Request: Go to the original repository and click on the "New Pull Request" button. Provide a brief description of your changes and submit the pull request.
+
+Review and Merge: Wait for your pull request to be reviewed by the repository maintainers. Once approved, your changes will be merged into the main branch.
+
+Support
+If you encounter any issues or have questions regarding the robot program, feel free to open an issue in this repository. We'll do our best to assist you as soon as possible.
