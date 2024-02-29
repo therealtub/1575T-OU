@@ -82,25 +82,39 @@ void quals_far()
     chassis.wait_drive();
     chassis.set_turn_pid(180, 100);
     chassis.wait_drive();
-    chassis.set_drive_pid(37, 100, false);
+    chassis.set_drive_pid(25.5, 100, false);
     chassis.wait_drive();
     chassis.set_turn_pid(135, 100);
     chassis.wait_drive();
+    RightWingOut();
     IntakeOut();
-    chassis.set_drive_pid(45, 100, false);
+    chassis.set_drive_pid(55, 100, false);
+    chassis.wait_drive();
+    // chassis.set_swing_pid(ez::RIGHT_SWING, 90, 100);
+    chassis.set_turn_pid(90, 100);
+    chassis.wait_drive();
+    chassis.set_drive_pid(35, 100, false);
     chassis.wait_drive();
     chassis.set_drive_pid(-45, 100, false);
     chassis.wait_drive();
     IntakeIn();
-    chassis.set_turn_pid(-45, 100);
+    RightWingIn();
+    chassis.set_turn_pid(270, 100);
     chassis.wait_drive();
+    BothWingsOut();
     chassis.set_drive_pid(-45, 100, false);
     chassis.wait_drive();
-    chassis.set_turn_pid(-90, 100);
+    BothWingsIn();
+    chassis.set_drive_pid(45, 100, false);
     chassis.wait_drive();
-    chassis.set_drive_pid(-45, 100, false);
+    chassis.set_turn_pid(135, 100);
     chassis.wait_drive();
-    
+    chassis.set_drive_pid(-47.5, 100, false);
+    chassis.wait_drive();
+    chassis.set_turn_pid(177.5, 127);
+    chassis.wait_drive();
+    chassis.set_drive_pid(-96.5, 40, false);
+    chassis.wait_drive();
 }
 
 //void fifteensec_blue()

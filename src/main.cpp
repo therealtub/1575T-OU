@@ -186,40 +186,13 @@ void opcontrol() {
     {
       IntakeOut();
     }
-    
-    int BothWingsToggleV = -1;
-    if(master.get_digital_new_press(DIGITAL_DOWN))
+    if(master.get_digital(DIGITAL_DOWN))
     {
-        BothWingsToggleV = BothWingsToggleV * -1;
-      if(BothWingsToggleV == 1){
-          BothWingsOut();
-      } else {
-          BothWingsIn();
-      }
+      BothWingsOut();
+    } else 
+    {
+      BothWingsIn();
     }
-
-    int LeftWingToggleV = -1;
-    if(master.get_digital_new_press(DIGITAL_L1))
-    {
-      LeftWingToggleV = LeftWingToggleV * -1;
-      if(LeftWingToggleV == 1){
-          LeftWingOut();
-      } else {
-          LeftWingIn();
-      }
-    
-
-    int RightWingToggleV = -1;
-    if(master.get_digital_new_press(DIGITAL_R1))
-    {
-      RightWingToggleV = RightWingToggleV * -1;
-      if(RightWingToggleV == 1){
-          RightWingOut();
-      } else {
-          RightWingIn();
-      }
-    }
-
     pros::delay(ez::util::DELAY_TIME); // This is used for timer calculations!  Keep this ez::util::DELAY_TIME
   }
 }
