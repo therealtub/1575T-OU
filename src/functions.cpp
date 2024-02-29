@@ -10,11 +10,32 @@ void IntakeIn()
     Intake.set_value(LOW);
 }
 
-void WingsOut()
+void BothWingsOut()
 {
-    Wings.set_value(HIGH);
+    LeftWing.set_value(HIGH);
+    RightWing.set_value(HIGH);
 }
-void WingsIn()
+void BothWingsIn()
 {
-    Wings.set_value(LOW);
+    LeftWing.set_value(LOW);
+    RightWing.set_value(LOW);
 }
+
+void LeftWingOut()
+{
+    LeftWing.set_value(HIGH);
+}
+void LeftWingIn()
+{
+    LeftWing.set_value(LOW);
+}
+
+void RightWingOut()
+{
+    RightWing.set_value(HIGH);
+}
+void RightWingIn()
+{
+    RightWing.set_value(LOW);
+}
+

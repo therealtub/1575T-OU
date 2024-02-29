@@ -14,7 +14,7 @@ Drive chassis (
 
   // Right Chassis Ports (negative port will reverse it!)
   //   the first port is the sensored port (when trackers are not used!)
-  ,{11, 12, 14, -2}
+  ,{11, 12, 13, -3}
 
   // IMU Port
   ,9
@@ -77,10 +77,11 @@ void initialize() {
   // Autonomous Selector using LLEMU
   ez::as::auton_selector.add_autons({
     Auton("skills\n\nskills.", skills),
-    Auton("AWP\n\n15 sec matched.", fifteensec_blue),
-    Auton("AWP\n\n15 sec ummatched.", fifteensec_red),
-    Auton("AWP\n\n15 sec matched REGULAR.", fifteensec_blue1),
-    Auton("AWP\n\n15 sec ummatched REGULAR.", fifteensec_red1),
+    Auton("Qualification\n\nFar side auton.", quals_far),
+    // Auton("AWP\n\n15 sec matched.", fifteensec_blue),
+    // Auton("AWP\n\n15 sec ummatched.", fifteensec_red),
+    // Auton("AWP\n\n15 sec matched REGULAR.", fifteensec_blue1),
+    // Auton("AWP\n\n15 sec ummatched REGULAR.", fifteensec_red1),
   });
 
   // Initialize chassis and auton selector
@@ -186,13 +187,39 @@ void opcontrol() {
       IntakeOut();
     }
     
-    if(master.get_digital(DIGITAL_DOWN))
+    int BothWingsToggleV = -1;
+    if(master.get_digital_new_press(DIGITAL_DOWN))
     {
-      WingsOut();
-    } else 
-    {
-      WingsIn();
+        BothWingsToggleV = BothWingsToggleV * -1;
+      if(BothWingsToggleV == 1){
+          BothWingsOut();
+      } else {
+          BothWingsIn();
+      }
     }
+
+    int LeftWingToggleV = -1;
+    if(master.get_digital_new_press(DIGITAL_L1))
+    {
+      LeftWingToggleV = LeftWingToggleV * -1;
+      if(LeftWingToggleV == 1){
+          LeftWingOut();
+      } else {
+          LeftWingIn();
+      }
+    
+
+    int RightWingToggleV = -1;
+    if(master.get_digital_new_press(DIGITAL_R1))
+    {
+      RightWingToggleV = RightWingToggleV * -1;
+      if(RightWingToggleV == 1){
+          RightWingOut();
+      } else {
+          RightWingIn();
+      }
+    }
+
     pros::delay(ez::util::DELAY_TIME); // This is used for timer calculations!  Keep this ez::util::DELAY_TIME
   }
 }

@@ -3,5 +3,7 @@ using namespace pros;
 
 // VEXcode devices
 
-extern ADIDigitalOut Wings;
+
 extern ADIDigitalOut Intake;
+extern ADIDigitalOut LeftWing;
+extern ADIDigitalOut RightWing;

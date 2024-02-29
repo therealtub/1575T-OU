@@ -72,217 +72,248 @@ void modified_exit_condition() {
 //
 // DO NOT TOUCH
 
-void fifteensec_blue()
+void quals_far()
 {
-  IntakeIn();
-  WingsOut();
-  chassis.set_drive_pid(50, 100, false);
-  chassis.wait_drive();
-
-  chassis.set_turn_pid(45, 100);
-  chassis.wait_drive();
-
-  IntakeOut();
-
-  chassis.set_drive_pid(45, 100, false);
-  chassis.wait_drive();
-
-  chassis.set_drive_pid(-40, 100, false);
-  chassis.wait_drive();
-
-  WingsIn();
-
-  chassis.set_turn_pid(225, 100);
-  chassis.wait_drive();
-
-  WingsOut();
-
-  chassis.set_drive_pid(-45, 100, false);
-  chassis.wait_drive();
-  
-  chassis.set_drive_pid(45, 100, false);
-  chassis.wait_drive();
-
-  chassis.set_drive_pid(-50, 100, false);
-  chassis.wait_drive();
-  
-  chassis.set_drive_pid(50, 100, false);
-  chassis.wait_drive();
-
-
-  WingsIn();
-
-  chassis.set_turn_pid(0, 100);
-  chassis.wait_drive();
-
-  chassis.set_drive_pid(-45, 100);
-  chassis.wait_drive();
-
-  chassis.set_turn_pid(-45, 100);
-  chassis.wait_drive();
+    IntakeOut();
+    chassis.set_drive_pid(30, 127, false);
+    chassis.wait_drive();
+    IntakeIn();
+    chassis.set_drive_pid(-90.5, 100, false);
+    chassis.wait_drive();
+    chassis.set_turn_pid(180, 100);
+    chassis.wait_drive();
+    chassis.set_drive_pid(37, 100, false);
+    chassis.wait_drive();
+    chassis.set_turn_pid(135, 100);
+    chassis.wait_drive();
+    IntakeOut();
+    chassis.set_drive_pid(45, 100, false);
+    chassis.wait_drive();
+    chassis.set_drive_pid(-45, 100, false);
+    chassis.wait_drive();
+    IntakeIn();
+    chassis.set_turn_pid(-45, 100);
+    chassis.wait_drive();
+    chassis.set_drive_pid(-45, 100, false);
+    chassis.wait_drive();
+    chassis.set_turn_pid(-90, 100);
+    chassis.wait_drive();
+    chassis.set_drive_pid(-45, 100, false);
+    chassis.wait_drive();
+    
 }
 
-void fifteensec_red()
-{
-  IntakeIn();
-  WingsOut();
-  chassis.set_drive_pid(50, 100, false);
-  chassis.wait_drive();
+//void fifteensec_blue()
+// {
+//   IntakeIn();
+//   BothWingsOut();
+//   chassis.set_drive_pid(50, 100, false);
+//   chassis.wait_drive();
 
-  chassis.set_turn_pid(-45, 100);
-  chassis.wait_drive();
+//   chassis.set_turn_pid(45, 100);
+//   chassis.wait_drive();
 
-  IntakeOut();
+//   IntakeOut();
 
-  chassis.set_drive_pid(45, 100, false);
-  chassis.wait_drive();
+//   chassis.set_drive_pid(45, 100, false);
+//   chassis.wait_drive();
 
-  chassis.set_drive_pid(-40, 100, false);
-  chassis.wait_drive();
+//   chassis.set_drive_pid(-40, 100, false);
+//   chassis.wait_drive();
 
-  WingsIn();
+//   BothWingsIn();
 
-  chassis.set_turn_pid(-225, 100);
-  chassis.wait_drive();
+//   chassis.set_turn_pid(225, 100);
+//   chassis.wait_drive();
 
-  WingsOut();
+//   BothWingsOut();
 
-  chassis.set_drive_pid(-45, 100, false);
-  chassis.wait_drive();
+//   chassis.set_drive_pid(-45, 100, false);
+//   chassis.wait_drive();
   
-  chassis.set_drive_pid(45, 100, false);
-  chassis.wait_drive();
+//   chassis.set_drive_pid(45, 100, false);
+//   chassis.wait_drive();
 
-  chassis.set_drive_pid(-50, 100, false);
-  chassis.wait_drive();
+//   chassis.set_drive_pid(-50, 100, false);
+//   chassis.wait_drive();
   
-  chassis.set_drive_pid(50, 100, false);
-  chassis.wait_drive();
+//   chassis.set_drive_pid(50, 100, false);
+//   chassis.wait_drive();
 
 
-  WingsIn();
+//   BothWingsIn();
 
-  chassis.set_turn_pid(0, 100);
-  chassis.wait_drive();
+//   chassis.set_turn_pid(0, 100);
+//   chassis.wait_drive();
 
-  chassis.set_drive_pid(-45, 100);
-  chassis.wait_drive();
+//   chassis.set_drive_pid(-45, 100);
+//   chassis.wait_drive();
 
-  chassis.set_turn_pid(45, 100);
-  chassis.wait_drive();
-}
+//   chassis.set_turn_pid(-45, 100);
+//   chassis.wait_drive();
+// }
 
-void fifteensec_blue1()
-{
-// releases the wings and intake so that we can get it out the barrier
-  IntakeIn();
-  WingsOut();
-// moves right in front of the triball
-  chassis.set_drive_pid(65, 100, false);
-  chassis.wait_drive();
-// gets it out of the barrier
-  chassis.set_turn_pid(45, 100);
-  chassis.wait_drive();
+// void fifteensec_red()
+// {
+//   IntakeIn();
+//   BothWingsOut();
+//   chassis.set_drive_pid(50, 100, false);
+//   chassis.wait_drive();
 
-  IntakeOut();
-// jams it into the goal
-  chassis.set_drive_pid(45, 100, false);
-  chassis.wait_drive();
+//   chassis.set_turn_pid(-45, 100);
+//   chassis.wait_drive();
 
-  chassis.set_drive_pid(-40, 100, false);
-  chassis.wait_drive();
-// uses the wings to plow the rest of the triball into the goal.
-  WingsIn();
+//   IntakeOut();
 
-  chassis.set_turn_pid(225, 100);
-  chassis.wait_drive();
+//   chassis.set_drive_pid(45, 100, false);
+//   chassis.wait_drive();
 
-  WingsOut();
+//   chassis.set_drive_pid(-40, 100, false);
+//   chassis.wait_drive();
 
-  chassis.set_drive_pid(-45, 100, false);
-  chassis.wait_drive();
+//   BothWingsIn();
 
-  chassis.set_drive_pid(45, 100, false);
-  chassis.wait_drive();
+//   chassis.set_turn_pid(-225, 100);
+//   chassis.wait_drive();
 
-  chassis.set_drive_pid(-50, 100, false);
-  chassis.wait_drive();
+//   BothWingsOut();
 
-  chassis.set_drive_pid(50, 100, false);
-  chassis.wait_drive();
-  // then turns parallel to the matchload bar
-  WingsIn();
-
-  chassis.set_turn_pid(0, 100);
-  chassis.wait_drive();
-// drives to the end
-  chassis.set_drive_pid(-45, 100);
-  chassis.wait_drive();
-// faces the barrier
-  chassis.set_turn_pid(-45, 100);
-  chassis.wait_drive();
-// touches the barrier
-  chassis.set_drive_pid(-80.5, 50, false);
-  chassis.wait_drive();
-}
-
-void fifteensec_red1()
-{
-  // releases the wings and intake so that we can get it out the barrier
-  IntakeIn();
-  WingsOut();
-  // moves right in front of the triball
-  chassis.set_drive_pid(65, 100, false);
-  chassis.wait_drive();
-// gets it out of the barrier
-  chassis.set_turn_pid(-45, 100);
-  chassis.wait_drive();
-
-  IntakeOut();
-// jams it into the goal
-  chassis.set_drive_pid(45, 100, false);
-  chassis.wait_drive();
-
-  chassis.set_drive_pid(-40, 100, false);
-  chassis.wait_drive();
-// uses the wings to plow the rest of the triball into the goal.
-  WingsIn();
-
-  chassis.set_turn_pid(-225, 100);
-  chassis.wait_drive();
-
-  WingsOut();
-
-  chassis.set_drive_pid(-45, 100, false);
-  chassis.wait_drive();
+//   chassis.set_drive_pid(-45, 100, false);
+//   chassis.wait_drive();
   
-  chassis.set_drive_pid(45, 100, false);
-  chassis.wait_drive();
+//   chassis.set_drive_pid(45, 100, false);
+//   chassis.wait_drive();
 
-  chassis.set_drive_pid(-50, 100, false);
-  chassis.wait_drive();
+//   chassis.set_drive_pid(-50, 100, false);
+//   chassis.wait_drive();
   
-  chassis.set_drive_pid(50, 100, false);
-  chassis.wait_drive();
-  // then turns parallel to the matchload bar
+//   chassis.set_drive_pid(50, 100, false);
+//   chassis.wait_drive();
 
-  WingsIn();
 
-  chassis.set_turn_pid(0, 100);
-  chassis.wait_drive();
-// drives to the end
+//   BothWingsIn();
 
-  chassis.set_drive_pid(-45, 100);
-  chassis.wait_drive();
-// faces the barrier
+//   chassis.set_turn_pid(0, 100);
+//   chassis.wait_drive();
 
-  chassis.set_turn_pid(45, 100);
-  chassis.wait_drive();
-// touches the barrier
+//   chassis.set_drive_pid(-45, 100);
+//   chassis.wait_drive();
 
-  chassis.set_drive_pid(-80.5, 50, false);
-  chassis.wait_drive();
-}
+//   chassis.set_turn_pid(45, 100);
+//   chassis.wait_drive();
+// }
+
+// void fifteensec_blue1()
+// {
+// // releases the wings and intake so that we can get it out the barrier
+//   IntakeIn();
+//   BothWingsOut();
+// // moves right in front of the triball
+//   chassis.set_drive_pid(65, 100, false);
+//   chassis.wait_drive();
+// // gets it out of the barrier
+//   chassis.set_turn_pid(45, 100);
+//   chassis.wait_drive();
+
+//   IntakeOut();
+// // jams it into the goal
+//   chassis.set_drive_pid(45, 100, false);
+//   chassis.wait_drive();
+
+//   chassis.set_drive_pid(-40, 100, false);
+//   chassis.wait_drive();
+// // uses the wings to plow the rest of the triball into the goal.
+//   BothWingsIn();
+
+//   chassis.set_turn_pid(225, 100);
+//   chassis.wait_drive();
+
+//   BothWingsOut();
+
+//   chassis.set_drive_pid(-45, 100, false);
+//   chassis.wait_drive();
+
+//   chassis.set_drive_pid(45, 100, false);
+//   chassis.wait_drive();
+
+//   chassis.set_drive_pid(-50, 100, false);
+//   chassis.wait_drive();
+
+//   chassis.set_drive_pid(50, 100, false);
+//   chassis.wait_drive();
+//   // then turns parallel to the matchload bar
+//   BothWingsIn();
+
+//   chassis.set_turn_pid(0, 100);
+//   chassis.wait_drive();
+// // drives to the end
+//   chassis.set_drive_pid(-45, 100);
+//   chassis.wait_drive();
+// // faces the barrier
+//   chassis.set_turn_pid(-45, 100);
+//   chassis.wait_drive();
+// // touches the barrier
+//   chassis.set_drive_pid(-80.5, 50, false);
+//   chassis.wait_drive();
+// }
+
+// void fifteensec_red1()
+// {
+//   // releases the wings and intake so that we can get it out the barrier
+//   IntakeIn();
+//   BothWingsOut();
+//   // moves right in front of the triball
+//   chassis.set_drive_pid(65, 100, false);
+//   chassis.wait_drive();
+// // gets it out of the barrier
+//   chassis.set_turn_pid(-45, 100);
+//   chassis.wait_drive();
+
+//   IntakeOut();
+// // jams it into the goal
+//   chassis.set_drive_pid(45, 100, false);
+//   chassis.wait_drive();
+
+//   chassis.set_drive_pid(-40, 100, false);
+//   chassis.wait_drive();
+// // uses the wings to plow the rest of the triball into the goal.
+//   BothWingsIn();
+
+//   chassis.set_turn_pid(-225, 100);
+//   chassis.wait_drive();
+
+//   BothWingsOut();
+
+//   chassis.set_drive_pid(-45, 100, false);
+//   chassis.wait_drive();
+  
+//   chassis.set_drive_pid(45, 100, false);
+//   chassis.wait_drive();
+
+//   chassis.set_drive_pid(-50, 100, false);
+//   chassis.wait_drive();
+  
+//   chassis.set_drive_pid(50, 100, false);
+//   chassis.wait_drive();
+//   // then turns parallel to the matchload bar
+
+//   BothWingsIn();
+
+//   chassis.set_turn_pid(0, 100);
+//   chassis.wait_drive();
+// // drives to the end
+
+//   chassis.set_drive_pid(-45, 100);
+//   chassis.wait_drive();
+// // faces the barrier
+
+//   chassis.set_turn_pid(45, 100);
+//   chassis.wait_drive();
+// // touches the barrier
+
+//   chassis.set_drive_pid(-80.5, 50, false);
+//   chassis.wait_drive();
+// }
 
 void skills()
 {
@@ -378,7 +409,7 @@ void skills()
   chassis.set_turn_pid(-25, 100);
   chassis.wait_drive();
 
-  WingsOut();
+  BothWingsOut();
   // plows triballs
   chassis.set_drive_pid(-85, 127, true);
   chassis.wait_drive();
@@ -386,7 +417,7 @@ void skills()
   chassis.set_drive_pid(85, 127, true);
   chassis.wait_drive();
 
-  WingsIn();
+  BothWingsIn();
   // moves to front
   chassis.set_turn_pid(-70, 100);
   chassis.wait_drive();
@@ -397,7 +428,7 @@ void skills()
   chassis.set_turn_pid(0, 100);
   chassis.wait_drive();
 
-  WingsOut();
+  BothWingsOut();
  // plows the rest
   chassis.set_drive_pid(-75, 127, true);
   chassis.wait_drive();
@@ -411,7 +442,7 @@ void skills()
   chassis.set_drive_pid(75, 127, true);
   chassis.wait_drive();
 
-  WingsIn();
+  BothWingsIn();
 }
 void ranpo_skills(){
   //rei's code practices Below:
